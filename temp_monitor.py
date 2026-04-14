@@ -21,9 +21,9 @@ def add_reading(monitor, temp):
     Agrega una nueva lectura con la temperatura especificada.
     Retorna el diccionario modificado.
     """
-    def add_reading(monitor, temp):
-        if len(monitor["readings"]) < monitor['max']:
-           monitor["readings"].append(temp)
+
+    if len(monitor["readings"]) < monitor['max']:
+        monitor["readings"].append(temp)
         monitor["total"] += temp
         return monitor
 
@@ -39,7 +39,10 @@ def average_temp(monitor):
     """
     Retorna la temperatura promedio de todas las lecturas.
     """
-
+def average_temp(monitor):
+    if count(monitor) == 0:
+        return 0.0
+    return monitor['total'] / count(monitor)
 
 
 
