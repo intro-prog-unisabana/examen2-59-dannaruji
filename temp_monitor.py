@@ -12,7 +12,6 @@ def init(max_readings):
     """
 
     dic = {"max": max_readings, "reading":[], "total":0.0}
-    "readings":
 
     return dic
         
@@ -27,7 +26,7 @@ def add_reading(monitor, temp):
         monitor["total"] += temp
         return monitor
 
-def count(monitor):
+def count(monitor): 
     """
     Retorna el numero de lecturas agregadas.
     """
