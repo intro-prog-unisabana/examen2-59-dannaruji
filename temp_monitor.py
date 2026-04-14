@@ -12,6 +12,7 @@ def init(max_readings):
     """
 
     dic = {"max": max_readings, "reading":[], "total":0.0}
+    "readings"
 
     return dic
         
@@ -113,3 +114,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
