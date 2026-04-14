@@ -6,38 +6,50 @@
 #   - 'readings': lista con las temperaturas de cada lectura (list)
 #   - 'total':    suma total de todas las temperaturas (float)
 
-
 def init(max_readings):
     """
     Crea y retorna un diccionario para almacenar hasta max_readings lecturas.
     """
-    # TODO: Implementar
-    pass
-
-
+    dic = {}
+    if len(dic) < max_readings:
+        for i in dic:
+            dic[i] = ""
+        return dic
+        
 def add_reading(monitor, temp):
     """
     Agrega una nueva lectura con la temperatura especificada.
     Retorna el diccionario modificado.
     """
-    # TODO: Implementar
-    pass
-
+    nueva_lectura = {}
+    lectura = input("Ingrese el número de lectura:\n")
+    nueva_lectura[lectura] = temp
+    monitor[lectura] = nueva_lectura
+    return nueva_lectura 
 
 def count(monitor):
     """
     Retorna el numero de lecturas agregadas.
     """
-    # TODO: Implementar
-    pass
+    nueva = add_reading()
+    if monitor == nueva:
+        return ""
+    elif monitor < nueva:
+        return len(nueva) - len(monitor)
 
 
 def average_temp(monitor):
     """
     Retorna la temperatura promedio de todas las lecturas.
     """
-    # TODO: Implementar
-    pass
+    promedio = add_reading("")
+
+
+
+
+
+
+
 
 
 def format_readings(monitor):
